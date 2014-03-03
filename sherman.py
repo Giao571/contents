@@ -12,3 +12,12 @@ class Matrix:
         Example:
         >>> a = Matrix(2, 3, 1)
         >>> a
+        Matrix consist of 2 rows and 3 columns
+        [1, 1, 1]
+        [1, 1, 1]
+        """
+
+        self.row, self.column = row, column
+        self.array = [[default_value for c in range(column)] for r in range(row)]
+
+    def __str__(self):
