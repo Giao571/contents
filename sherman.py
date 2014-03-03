@@ -21,3 +21,4 @@ class Matrix:
         self.array = [[default_value for c in range(column)] for r in range(row)]
 
     def __str__(self):
+        """
