@@ -28,3 +28,8 @@ class Matrix:
 
         # Prefix
         s = "Matrix consist of %d rows and %d columns\n" % (self.row, self.column)
+
+        # Make string identifier
+        max_element_length = 0
+        for row_vector in self.array:
+            for obj in row_vector:
