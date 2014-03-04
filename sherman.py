@@ -33,3 +33,11 @@ class Matrix:
         max_element_length = 0
         for row_vector in self.array:
             for obj in row_vector:
+                max_element_length = max(max_element_length, len(str(obj)))
+        string_format_identifier = "%%%ds" % (max_element_length,)
+
+        # Make string and return
+        def single_line(row_vector):
+            nonlocal string_format_identifier
+            line = "["
+            line += ", ".join(string_format_identifier % (obj,) for obj in row_vector)
