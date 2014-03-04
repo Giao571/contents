@@ -22,3 +22,9 @@ class Matrix:
 
     def __str__(self):
         """
+        <method Matrix.__str__>
+        Return string representation of this matrix.
+        """
+
+        # Prefix
+        s = "Matrix consist of %d rows and %d columns\n" % (self.row, self.column)
