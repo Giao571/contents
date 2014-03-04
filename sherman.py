@@ -41,3 +41,11 @@ class Matrix:
             nonlocal string_format_identifier
             line = "["
             line += ", ".join(string_format_identifier % (obj,) for obj in row_vector)
+            line += "]"
+            return line
+
+        s += "\n".join(single_line(row_vector) for row_vector in self.array)
+        return s
+
+    def __repr__(self):
+        return str(self)
