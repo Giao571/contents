@@ -49,3 +49,10 @@ class Matrix:
 
     def __repr__(self):
         return str(self)
+
+    def validateIndices(self, loc: tuple):
+        """
+        <method Matrix.validateIndices>
+        Check if given indices are valid to pick element from matrix.
+
+        Example:
