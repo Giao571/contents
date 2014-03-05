@@ -56,3 +56,13 @@ class Matrix:
         Check if given indices are valid to pick element from matrix.
 
         Example:
+        >>> a = Matrix(2, 6, 0)
+        >>> a.validateIndices((2, 7))
+        False
+        >>> a.validateIndices((0, 0))
+        True
+        """
+        if not (isinstance(loc, (list, tuple)) and len(loc) == 2):
+            return False
+        elif not (0 <= loc[0] < self.row and 0 <= loc[1] < self.column):
+            return False
