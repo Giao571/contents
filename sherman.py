@@ -78,3 +78,10 @@ class Matrix:
         >>> a = Matrix(3, 2, 7)
         >>> a[1, 0]
         7
+        """
+        assert self.validateIndices(loc)
+        return self.array[loc[0]][loc[1]]
+
+    def __setitem__(self, loc: tuple, value: float):
+        """
+        <method Matrix.__setitem__>
