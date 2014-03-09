@@ -101,3 +101,7 @@ class Matrix:
     def __add__(self, another):
         """
         <method Matrix.__add__>
+        Return self + another.
+
+        Example:
+        >>> a = Matrix(2, 1, -4)
