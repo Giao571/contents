@@ -111,3 +111,7 @@ class Matrix:
         [-1]
         [-1]
         """
+
+        # Validation
+        assert isinstance(another, Matrix)
+        assert self.row == another.row and self.column == another.column
