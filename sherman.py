@@ -126,3 +126,8 @@ class Matrix:
     def __neg__(self):
         """
         <method Matrix.__neg__>
+        Return -self.
+
+        Example:
+        >>> a = Matrix(2, 2, 3)
+        >>> a[0, 1] = a[1, 0] = -2
