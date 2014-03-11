@@ -118,3 +118,11 @@ class Matrix:
 
         # Add
         result = Matrix(self.row, self.column)
+        for r in range(self.row):
+            for c in range(self.column):
+                result[r, c] = self[r, c] + another[r, c]
+        return result
+
+    def __neg__(self):
+        """
+        <method Matrix.__neg__>
