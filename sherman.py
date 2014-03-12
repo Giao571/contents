@@ -131,3 +131,7 @@ class Matrix:
         Example:
         >>> a = Matrix(2, 2, 3)
         >>> a[0, 1] = a[1, 0] = -2
+        >>> -a
+        Matrix consist of 2 rows and 2 columns
+        [-3,  2]
+        [ 2, -3]
