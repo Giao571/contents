@@ -146,3 +146,9 @@ class Matrix:
     def __sub__(self, another):
         return self + (-another)
 
+    def __mul__(self, another):
+        """
+        <method Matrix.__mul__>
+        Return self * another.
+
+        Example:
