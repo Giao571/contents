@@ -161,3 +161,10 @@ class Matrix:
         """
 
         if isinstance(another, (int, float)):  # Scalar multiplication
+            result = Matrix(self.row, self.column)
+            for r in range(self.row):
+                for c in range(self.column):
+                    result[r, c] = self[r, c] * another
+            return result
+        elif isinstance(another, Matrix):  # Matrix multiplication
+            assert self.column == another.row
