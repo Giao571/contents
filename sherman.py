@@ -158,3 +158,6 @@ class Matrix:
         Matrix consist of 2 rows and 3 columns
         [-2, -2, -6]
         [-2, -2, -6]
+        """
+
+        if isinstance(another, (int, float)):  # Scalar multiplication
