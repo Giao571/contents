@@ -152,3 +152,5 @@ class Matrix:
         Return self * another.
 
         Example:
+        >>> a = Matrix(2, 3, 1)
+        >>> a[0,2] = a[1,2] = 3
