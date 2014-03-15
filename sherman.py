@@ -168,3 +168,13 @@ class Matrix:
             return result
         elif isinstance(another, Matrix):  # Matrix multiplication
             assert self.column == another.row
+            result = Matrix(self.row, another.column)
+            for r in range(self.row):
+                for c in range(another.column):
+                    for i in range(self.column):
+                        result[r, c] += self[r, i] * another[i, c]
+            return result
+        else:
+            raise TypeError(
+                "Unsupported type given for another ({})".format(type(another))
+            )
