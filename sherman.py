@@ -178,3 +178,12 @@ class Matrix:
             raise TypeError(
                 "Unsupported type given for another ({})".format(type(another))
             )
+
+    def transpose(self):
+        """
+        <method Matrix.transpose>
+        Return self^T.
+
+        Example:
+        >>> a = Matrix(2, 3)
+        >>> for r in range(2):
