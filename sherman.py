@@ -198,3 +198,12 @@ class Matrix:
         """
 
         result = Matrix(self.column, self.row)
+        for r in range(self.row):
+            for c in range(self.column):
+                result[c, r] = self[r, c]
+        return result
+
+    def ShermanMorrison(self, u, v):
+        """
+        <method Matrix.ShermanMorrison>
+        Apply Sherman-Morrison formula in O(n^2).
