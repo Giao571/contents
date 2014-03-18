@@ -233,3 +233,11 @@ class Matrix:
         assert isinstance(u, Matrix) and isinstance(v, Matrix)
         assert self.row == self.column == u.row == v.row  # u, v should be column vector
         assert u.column == v.column == 1  # u, v should be column vector
+
+        # Calculate
+        vT = v.transpose()
+        numerator_factor = (vT * self * u)[0, 0] + 1
+        if numerator_factor == 0:
+            return None  # It's not invertable
+        return self - ((self * u) * (vT * self) * (1.0 / numerator_factor))
+
