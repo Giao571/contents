@@ -241,3 +241,8 @@ class Matrix:
             return None  # It's not invertable
         return self - ((self * u) * (vT * self) * (1.0 / numerator_factor))
 
+
+# Testing
+if __name__ == "__main__":
+
+    def test1():
