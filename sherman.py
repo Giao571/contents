@@ -225,3 +225,11 @@ class Matrix:
         >>> ainv.ShermanMorrison(u, v)
         Matrix consist of 3 rows and 3 columns
         [  1.2857142857142856, -0.14285714285714285,   0.3571428571428571]
+        [  0.5714285714285714,   0.7142857142857143,   0.7142857142857142]
+        [ -0.8571428571428571,  0.42857142857142855,  -0.0714285714285714]
+        """
+
+        # Size validation
+        assert isinstance(u, Matrix) and isinstance(v, Matrix)
+        assert self.row == self.column == u.row == v.row  # u, v should be column vector
+        assert u.column == v.column == 1  # u, v should be column vector
